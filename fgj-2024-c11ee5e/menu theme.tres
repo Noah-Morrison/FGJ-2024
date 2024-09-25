@@ -1,0 +1,43 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dhp752uhv76yu"]
+
+[ext_resource type="Texture2D" uid="uid://dkck2qhvfl7y0" path="res://textures/yellow-cheese-with-holes-panoramic-background-vector.jpg" id="1_o6r4c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ju1t3"]
+bg_color = Color(0.443137, 0.65098, 0.501961, 1)
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.443137, 0.65098, 0.501961, 1)
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mds4y"]
+bg_color = Color(0.866667, 0.376471, 0.294118, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3vchc"]
+texture = ExtResource("1_o6r4c")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dys3k"]
+bg_color = Color(0.616024, 0.232978, 0.159993, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdye4"]
+bg_color = Color(0.176439, 0.0428585, 0.0208916, 1)
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 20
+Button/styles/focus = SubResource("StyleBoxFlat_ju1t3")
+Button/styles/hover = SubResource("StyleBoxFlat_mds4y")
+Button/styles/normal = SubResource("StyleBoxTexture_3vchc")
+Button/styles/pressed = SubResource("StyleBoxFlat_dys3k")
+Panel/styles/panel = SubResource("StyleBoxFlat_xdye4")
+VBoxContainer/constants/separation = 8
