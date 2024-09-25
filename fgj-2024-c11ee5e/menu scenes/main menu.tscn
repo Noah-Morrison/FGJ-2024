@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ce8fks48ucqcn"]
 
-[ext_resource type="Script" path="res://main menu.gd" id="1_jhf18"]
-[ext_resource type="Theme" uid="uid://dhp752uhv76yu" path="res://menu theme.tres" id="1_mitgw"]
+[ext_resource type="Theme" uid="uid://dhp752uhv76yu" path="res://themes/menu theme.tres" id="1_48inm"]
+[ext_resource type="Script" path="res://menu scripts/main menu.gd" id="2_jtutc"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,8 +14,8 @@ offset_right = 22.0
 offset_bottom = 26.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_mitgw")
-script = ExtResource("1_jhf18")
+theme = ExtResource("1_48inm")
+script = ExtResource("2_jtutc")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
