@@ -20,4 +20,4 @@ func _on_settings_pressed():
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://FloorGrid.tscn")
+	get_tree().change_scene_to_file("res://game scenes and scripts/FloorGrid.tscn")

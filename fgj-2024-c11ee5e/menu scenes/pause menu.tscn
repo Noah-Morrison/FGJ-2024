@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c02q8khej1us8"]
+[gd_scene load_steps=5 format=3 uid="uid://c02q8khej1us8"]
 
 [ext_resource type="Theme" uid="uid://dhp752uhv76yu" path="res://themes/menu theme.tres" id="1_lf05b"]
 [ext_resource type="Script" path="res://menu scripts/pause.gd" id="2_ww4e8"]
+[ext_resource type="PackedScene" uid="uid://ce8vu5exys6pd" path="res://menu scenes/settings.tscn" id="3_yy8cd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xs28r"]
 bg_color = Color(0.176471, 0.0431373, 0.0196078, 0.772549)
@@ -73,4 +74,9 @@ focus_neighbor_top = NodePath("../settings")
 focus_neighbor_bottom = NodePath("../resume")
 text = "Quit"
 
+[node name="settings menu" parent="." instance=ExtResource("3_yy8cd")]
+layout_mode = 1
+
+[connection signal="pressed" from="Panel/VBoxContainer/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/quit" to="." method="_on_quit_pressed"]

@@ -1,8 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://cse54d3kqg2re"]
+[gd_scene load_steps=7 format=3 uid="uid://cse54d3kqg2re"]
 
-[ext_resource type="PackedScene" uid="uid://b4lfv8b6bqbuu" path="res://player.tscn" id="1_irwvq"]
+[ext_resource type="Theme" uid="uid://dhp752uhv76yu" path="res://themes/menu theme.tres" id="1_i20tn"]
+[ext_resource type="PackedScene" uid="uid://b4lfv8b6bqbuu" path="res://game scenes and scripts/player.tscn" id="1_irwvq"]
+[ext_resource type="Script" path="res://game scenes and scripts/FloorGrid.gd" id="1_qoiut"]
+[ext_resource type="Texture2D" uid="uid://bthwwbjg5ekq1" path="res://textures/brown-wooden-table-texture-for-background-or-wallpaper-use-free-photo.jpg" id="2_mvjhb"]
+[ext_resource type="PackedScene" uid="uid://c02q8khej1us8" path="res://menu scenes/pause menu.tscn" id="5_5ea2g"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lrp7g"]
+texture = ExtResource("2_mvjhb")
 
 [node name="FloorGrid" type="Node2D"]
+position = Vector2(704, 232)
+script = ExtResource("1_qoiut")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -712.0
+offset_top = -240.0
+offset_right = -672.0
+offset_bottom = -200.0
+scale = Vector2(49.48, 29.88)
+theme = ExtResource("1_i20tn")
+theme_override_styles/panel = SubResource("StyleBoxTexture_lrp7g")
 
 [node name="GridBackground" type="Polygon2D" parent="."]
 color = Color(0.866667, 0.380392, 0.290196, 1)
@@ -149,3 +167,15 @@ polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
 
 [node name="Player" parent="." instance=ExtResource("1_irwvq")]
 position = Vector2(268, 272)
+
+[node name="Control" parent="." instance=ExtResource("5_5ea2g")]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 264.0
+offset_top = 280.0
+offset_right = 264.0
+offset_bottom = 280.0
+grow_horizontal = 0
