@@ -21,21 +21,33 @@ func _process(delta):
 
 func _input(event):
 	if Input.is_action_pressed("move_up") && can_move:
-		position.y -= 105
-		can_move = false
-		timer.start()
+		if position.y < 100:
+			pass
+		else:
+			position.y -= 105
+			can_move = false
+			timer.start()
 	if Input.is_action_pressed("move_down") && can_move:
-		position.y += 105
-		can_move = false
-		timer.start()
+		if position.y > 400:
+			pass
+		else:
+			position.y += 105
+			can_move = false
+			timer.start()
 	if Input.is_action_pressed("move_left") && can_move:
-		position.x -= 105
-		can_move = false
-		timer.start()
+		if position.x < 100:
+			pass
+		else:
+			position.x -= 105
+			can_move = false
+			timer.start()
 	if Input.is_action_pressed("move_right") && can_move:
-		position.x += 105
-		can_move = false
-		timer.start()
+		if position.x > 400:
+			pass
+		else:
+			position.x += 105
+			can_move = false
+			timer.start()
 	if event.is_action_released("move_up"):
 		can_move = true
 	if event.is_action_released("move_down"):
