@@ -1,0 +1,151 @@
+[gd_scene load_steps=2 format=3 uid="uid://cse54d3kqg2re"]
+
+[ext_resource type="PackedScene" uid="uid://b4lfv8b6bqbuu" path="res://player.tscn" id="1_irwvq"]
+
+[node name="FloorGrid" type="Node2D"]
+
+[node name="GridBackground" type="Polygon2D" parent="."]
+color = Color(0.866667, 0.380392, 0.290196, 1)
+polygon = PackedVector2Array(0, 0, 530, 0, 530, 530, 0, 530)
+
+[node name="Row1" type="Node2D" parent="GridBackground"]
+
+[node name="GridSquare1" type="Polygon2D" parent="GridBackground/Row1"]
+position = Vector2(5, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare2" type="Polygon2D" parent="GridBackground/Row1"]
+position = Vector2(110, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare3" type="Polygon2D" parent="GridBackground/Row1"]
+position = Vector2(215, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare4" type="Polygon2D" parent="GridBackground/Row1"]
+position = Vector2(320, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare5" type="Polygon2D" parent="GridBackground/Row1"]
+position = Vector2(425, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="Row2" type="Node2D" parent="GridBackground"]
+position = Vector2(0, 105)
+
+[node name="GridSquare1" type="Polygon2D" parent="GridBackground/Row2"]
+position = Vector2(5, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare2" type="Polygon2D" parent="GridBackground/Row2"]
+position = Vector2(110, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare3" type="Polygon2D" parent="GridBackground/Row2"]
+position = Vector2(215, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare4" type="Polygon2D" parent="GridBackground/Row2"]
+position = Vector2(320, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare5" type="Polygon2D" parent="GridBackground/Row2"]
+position = Vector2(425, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="Row3" type="Node2D" parent="GridBackground"]
+position = Vector2(0, 210)
+
+[node name="GridSquare1" type="Polygon2D" parent="GridBackground/Row3"]
+position = Vector2(5, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare2" type="Polygon2D" parent="GridBackground/Row3"]
+position = Vector2(110, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare3" type="Polygon2D" parent="GridBackground/Row3"]
+position = Vector2(215, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare4" type="Polygon2D" parent="GridBackground/Row3"]
+position = Vector2(320, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare5" type="Polygon2D" parent="GridBackground/Row3"]
+position = Vector2(425, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="Row4" type="Node2D" parent="GridBackground"]
+position = Vector2(0, 315)
+
+[node name="GridSquare1" type="Polygon2D" parent="GridBackground/Row4"]
+position = Vector2(5, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare2" type="Polygon2D" parent="GridBackground/Row4"]
+position = Vector2(110, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare3" type="Polygon2D" parent="GridBackground/Row4"]
+position = Vector2(215, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare4" type="Polygon2D" parent="GridBackground/Row4"]
+position = Vector2(320, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare5" type="Polygon2D" parent="GridBackground/Row4"]
+position = Vector2(425, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="Row5" type="Node2D" parent="GridBackground"]
+position = Vector2(0, 420)
+
+[node name="GridSquare1" type="Polygon2D" parent="GridBackground/Row5"]
+position = Vector2(5, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare2" type="Polygon2D" parent="GridBackground/Row5"]
+position = Vector2(110, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare3" type="Polygon2D" parent="GridBackground/Row5"]
+position = Vector2(215, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare4" type="Polygon2D" parent="GridBackground/Row5"]
+position = Vector2(320, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GridSquare5" type="Polygon2D" parent="GridBackground/Row5"]
+position = Vector2(425, 5)
+color = Color(0.956863, 0.52549, 0.407843, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="Player" parent="." instance=ExtResource("1_irwvq")]
+position = Vector2(268, 272)
