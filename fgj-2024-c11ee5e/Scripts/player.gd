@@ -25,6 +25,7 @@ func _input(event):
 			pass
 		else:
 			position.y -= 105
+			rotation = 0
 			can_move = false
 			timer.start()
 	if Input.is_action_pressed("move_down") && can_move:
@@ -32,6 +33,7 @@ func _input(event):
 			pass
 		else:
 			position.y += 105
+			rotation = 3.2
 			can_move = false
 			timer.start()
 	if Input.is_action_pressed("move_left") && can_move:
@@ -39,6 +41,7 @@ func _input(event):
 			pass
 		else:
 			position.x -= 105
+			rotation = 4.7
 			can_move = false
 			timer.start()
 	if Input.is_action_pressed("move_right") && can_move:
@@ -46,6 +49,7 @@ func _input(event):
 			pass
 		else:
 			position.x += 105
+			rotation = 1.5
 			can_move = false
 			timer.start()
 	if event.is_action_released("move_up"):
