@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://c02q8khej1us8"]
+
+[ext_resource type="Theme" uid="uid://dhp752uhv76yu" path="res://themes/menu theme.tres" id="1_lf05b"]
+[ext_resource type="Script" path="res://menu scripts/pause.gd" id="2_ww4e8"]
+[ext_resource type="PackedScene" uid="uid://ce8vu5exys6pd" path="res://menu scenes/settings.tscn" id="3_yy8cd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xs28r"]
+bg_color = Color(0.176471, 0.0431373, 0.0196078, 0.772549)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = 26.0
+offset_right = 22.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lf05b")
+script = ExtResource("2_ww4e8")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -460.0
+offset_top = -181.0
+offset_right = 460.0
+offset_bottom = 181.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xs28r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = -80.0
+offset_right = 278.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="resume" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../quit")
+focus_neighbor_bottom = NodePath("../reset")
+text = "Resume"
+
+[node name="reset" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../resume")
+focus_neighbor_bottom = NodePath("../settings")
+text = "reset"
+
+[node name="settings" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../resume")
+focus_neighbor_bottom = NodePath("../quit")
+text = "settings"
+
+[node name="quit" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../settings")
+focus_neighbor_bottom = NodePath("../resume")
+text = "Quit"
+
+[node name="settings menu" parent="." instance=ExtResource("3_yy8cd")]
+layout_mode = 1
+
+[connection signal="pressed" from="Panel/VBoxContainer/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/quit" to="." method="_on_quit_pressed"]
