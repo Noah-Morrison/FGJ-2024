@@ -5,7 +5,18 @@ var timer = null
 var movement_delay = 0.35
 var can_move = true
 
+var x_coord = 2
+var y_coord = 2
 var actions = ["move_up", "move_down", "move_left", "move_right"]
+var grid_x = [58, 163, 268, 373, 478]
+var grid_y = [62, 167, 272, 377, 482]
+
+var direction = {
+	"up" : 0,
+	"down" : 3.2,
+	"left" : 4.7,
+	"right" : 1.5,
+}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,43 +31,51 @@ func on_timeout_complete():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	position.x = grid_x[x_coord]
+	position.y = grid_y[y_coord]
 	
-func _commit_action(action):
+	# Temporary variable for debugging
+	Global.player_x = x_coord
+	Global.player_y = y_coord
+	
+	if Global.cheese_fallen:
+		visible = false
+		for i in Global.hole_amount:
+			if x_coord == Global.cheese_holes[i][0] and y_coord == Global.cheese_holes[i][1]:
+				visible = true
+	
+func commit_action(action):
 	var commit = false
 	if action == "move_up":
-		if position.y < 100:
+		if y_coord == 0:
 			pass
 		else:
-			position.y -= 105
-			rotation = 0
+			y_coord -= 1
 			commit = true
 	elif action == "move_down":
-		if position.y > 400:
+		if y_coord == 4:
 			pass
 		else:
-			position.y += 105
-			rotation = 3.2
+			y_coord += 1
 			commit = true
 	elif action == "move_left":
-		if position.x < 100:
+		if x_coord == 0:
 			pass
 		else:
-			position.x -= 105
-			rotation = 4.7
+			x_coord -= 1
 			commit = true
 	elif action == "move_right":
-		if position.x > 400:
+		if x_coord == 4:
 			pass
 		else:
-			position.x += 105
-			rotation = 1.5
+			x_coord += 1
 			commit = true
-			
+
 	if commit:
 		can_move = false
 		timer.start()
 		Global.move_counter += 1
+		rotation = direction[action.split("_")[1]]
 
 # Function to handle player inputs
 func _input(event):
@@ -67,7 +86,7 @@ func _input(event):
 	# Loop through to see if the player has inputted any valid actions
 		for action in actions:
 			if Input.is_action_pressed(action) && can_move:
-				_commit_action(action)
+				commit_action(action)
 	
 	# Conditions to prevent conditious movement from a button being held down
 	for action in actions:
