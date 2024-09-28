@@ -15,3 +15,4 @@ func _process(delta):
 	
 	if Global.cheese_fallen == true:
 		$"cheese and shadow"/cheese.visible = true
+		$"cheese and shadow/shadow".visible = false

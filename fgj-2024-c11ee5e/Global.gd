@@ -23,7 +23,6 @@ func _ready():
 	timer.set_one_shot(true)
 	timer.set_wait_time(timer_delay)
 	timer.connect("timeout", Callable(self, "on_timeout_complete"))
-	add_child(timer)
 	
 func on_timeout_complete():
 	cheese_fallen = true
