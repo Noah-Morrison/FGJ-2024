@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://cao7inimqjfph"]
+
+[ext_resource type="Theme" uid="uid://dhp752uhv76yu" path="res://themes/menu theme.tres" id="1_1ls6i"]
+[ext_resource type="Script" path="res://1_player_death.gd" id="2_wgxk3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8dupk"]
+bg_color = Color(0.176471, 0.0431373, 0.0196078, 0.772549)
+
+[node name="player death" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1ls6i")
+script = ExtResource("2_wgxk3")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -460.0
+offset_top = -181.0
+offset_right = 460.0
+offset_bottom = 181.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8dupk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = -80.0
+offset_right = 278.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="reset" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Reset"
+
+[node name="return" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Return to main menu"
+
+[connection signal="pressed" from="Panel/VBoxContainer/return" to="." method="_on_return_pressed"]
