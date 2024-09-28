@@ -6,6 +6,7 @@ func _ready():
 	$Control.visible = false
 	$"Control/settings menu".visible = false
 	$"cheese and shadow".visible = true
+	$"player death".visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

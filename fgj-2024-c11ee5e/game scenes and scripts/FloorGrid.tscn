@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cse54d3kqg2re"]
+[gd_scene load_steps=10 format=3 uid="uid://cse54d3kqg2re"]
 
 [ext_resource type="Theme" uid="uid://dhp752uhv76yu" path="res://themes/menu theme.tres" id="1_i20tn"]
 [ext_resource type="PackedScene" uid="uid://b4lfv8b6bqbuu" path="res://game scenes and scripts/player.tscn" id="1_irwvq"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bhrqdvy881gi0" path="res://cheese_and_shadow.tscn" id="4_3fovv"]
 [ext_resource type="PackedScene" uid="uid://c02q8khej1us8" path="res://menu scenes/pause menu.tscn" id="5_5ea2g"]
 [ext_resource type="Script" path="res://game scenes and scripts/MoveCounter.gd" id="6_eo34l"]
+[ext_resource type="PackedScene" uid="uid://cao7inimqjfph" path="res://1_player_death.tscn" id="8_56q7r"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lrp7g"]
 texture = ExtResource("2_mvjhb")
@@ -171,6 +172,13 @@ polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
 
 [node name="Player" parent="." instance=ExtResource("1_irwvq")]
 position = Vector2(268, 272)
+
+[node name="player death" parent="." instance=ExtResource("8_56q7r")]
+visible = false
+offset_left = 280.0
+offset_top = 272.0
+offset_right = 280.0
+offset_bottom = 272.0
 
 [node name="Control" parent="." instance=ExtResource("5_5ea2g")]
 visible = false
