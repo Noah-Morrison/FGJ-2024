@@ -11,7 +11,7 @@ func _ready():
 		for y in 5:
 			$cheese.set_cell(0, Vector2i(x,y),1,Vector2i(0,0))
 			$shadow.set_cell(0, Vector2i(x,y),0,Vector2i(0,0))
-	for x in holes:
+	for i in range(holes):
 		var xrand = randi_range(0,4)
 		while xrand == prevlocx:
 			xrand = randi_range(0,4)
@@ -20,6 +20,8 @@ func _ready():
 			yrand = randi_range(0,4)
 		$cheese.set_cell(0, Vector2i(xrand,yrand),2,Vector2i(0,0))
 		$shadow.set_cell(0, Vector2i(xrand,yrand),1,Vector2i(0,0))
+		Global.cheese_holes[i][0] = xrand
+		Global.cheese_holes[i][1] = yrand
 		prevlocx = xrand
 		prevlocy = yrand
 
