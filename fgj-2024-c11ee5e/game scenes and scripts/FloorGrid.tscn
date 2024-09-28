@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cse54d3kqg2re"]
+[gd_scene load_steps=9 format=3 uid="uid://cse54d3kqg2re"]
 
 [ext_resource type="Theme" uid="uid://dhp752uhv76yu" path="res://themes/menu theme.tres" id="1_i20tn"]
 [ext_resource type="PackedScene" uid="uid://b4lfv8b6bqbuu" path="res://game scenes and scripts/player.tscn" id="1_irwvq"]
 [ext_resource type="Script" path="res://game scenes and scripts/FloorGrid.gd" id="1_qoiut"]
 [ext_resource type="Texture2D" uid="uid://bthwwbjg5ekq1" path="res://textures/brown-wooden-table-texture-for-background-or-wallpaper-use-free-photo.jpg" id="2_mvjhb"]
-[ext_resource type="PackedScene" uid="uid://bhrqdvy881gi0" path="res://cheese_and_shadow.tscn" id="4_3fovv"]
+[ext_resource type="PackedScene" path="res://cheese_and_shadow.tscn" id="4_3fovv"]
 [ext_resource type="PackedScene" uid="uid://c02q8khej1us8" path="res://menu scenes/pause menu.tscn" id="5_5ea2g"]
 [ext_resource type="Script" path="res://game scenes and scripts/MoveCounter.gd" id="6_eo34l"]
 
