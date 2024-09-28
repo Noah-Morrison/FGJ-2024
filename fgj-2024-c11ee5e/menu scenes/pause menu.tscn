@@ -75,6 +75,7 @@ focus_neighbor_bottom = NodePath("../resume")
 text = "Quit"
 
 [node name="settings menu" parent="." instance=ExtResource("3_yy8cd")]
+visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="Panel/VBoxContainer/resume" to="." method="_on_resume_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cse54d3kqg2re"]
+[gd_scene load_steps=9 format=3 uid="uid://cse54d3kqg2re"]
 
 [ext_resource type="Theme" uid="uid://dhp752uhv76yu" path="res://themes/menu theme.tres" id="1_i20tn"]
 [ext_resource type="PackedScene" uid="uid://b4lfv8b6bqbuu" path="res://game scenes and scripts/player.tscn" id="1_irwvq"]
