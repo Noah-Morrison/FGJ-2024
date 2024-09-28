@@ -5,7 +5,7 @@ extends Node2D
 func _ready():
 	$Control.visible = false
 	$"Control/settings menu".visible = false
-	$"cheese and shadow".visible = false
+	$"cheese and shadow".visible = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
