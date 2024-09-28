@@ -1,0 +1,22 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://fv4e2qegbppu"]
+
+[ext_resource type="Texture2D" uid="uid://b3xqrtyhjmjum" path="res://Art/filled cheese.png" id="1_06cfh"]
+[ext_resource type="Texture2D" uid="uid://c7eo853gke3yh" path="res://hole cheese.png" id="2_kbsp8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xpa0t"]
+texture = ExtResource("1_06cfh")
+texture_region_size = Vector2i(112, 112)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0a3v0"]
+texture = ExtResource("2_kbsp8")
+texture_region_size = Vector2i(106, 106)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(106, 106)
+sources/1 = SubResource("TileSetAtlasSource_xpa0t")
+sources/2 = SubResource("TileSetAtlasSource_0a3v0")

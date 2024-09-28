@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b4lfv8b6bqbuu" path="res://game scenes and scripts/player.tscn" id="1_irwvq"]
 [ext_resource type="Script" path="res://game scenes and scripts/FloorGrid.gd" id="1_qoiut"]
 [ext_resource type="Texture2D" uid="uid://bthwwbjg5ekq1" path="res://textures/brown-wooden-table-texture-for-background-or-wallpaper-use-free-photo.jpg" id="2_mvjhb"]
+[ext_resource type="PackedScene" uid="uid://bhrqdvy881gi0" path="res://cheese_and_shadow.tscn" id="4_3fovv"]
 [ext_resource type="PackedScene" uid="uid://c02q8khej1us8" path="res://menu scenes/pause menu.tscn" id="5_5ea2g"]
 [ext_resource type="Script" path="res://game scenes and scripts/MoveCounter.gd" id="6_eo34l"]
 
@@ -165,6 +166,8 @@ polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
 position = Vector2(425, 5)
 color = Color(0.956863, 0.52549, 0.407843, 1)
 polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="cheese and shadow" parent="." instance=ExtResource("4_3fovv")]
 
 [node name="Player" parent="." instance=ExtResource("1_irwvq")]
 position = Vector2(268, 272)
