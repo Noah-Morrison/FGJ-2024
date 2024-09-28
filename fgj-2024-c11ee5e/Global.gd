@@ -21,7 +21,12 @@ func _ready():
 		cheese_holes.append([])
 		for j in hole_coords:
 			cheese_holes[i].append(0)
-	pass # Replace with function body.
+			
+# Adds timer
+	timer = Timer.new()
+	timer.set_one_shot(true)
+	timer.set_wait_time(timer_delay)
+	timer.connect("timeout", Callable(self, "on_timeout_complete"))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,11 +35,6 @@ func _process(delta):
 		cheese_fallen = true
 
 
-func _ready():
-	timer = Timer.new()
-	timer.set_one_shot(true)
-	timer.set_wait_time(timer_delay)
-	timer.connect("timeout", Callable(self, "on_timeout_complete"))
 	
 func on_timeout_complete():
 	cheese_fallen = true
