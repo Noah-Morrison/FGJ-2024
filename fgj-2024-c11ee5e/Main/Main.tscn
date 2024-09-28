@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ce8fks48ucqcn"]
 
-[ext_resource type="Theme" uid="uid://dhp752uhv76yu" path="res://themes/menu theme.tres" id="1_48inm"]
-[ext_resource type="Script" path="res://menu scripts/main menu.gd" id="2_jtutc"]
-[ext_resource type="PackedScene" uid="uid://ce8vu5exys6pd" path="res://menu scenes/settings.tscn" id="3_rgb6d"]
+[ext_resource type="Theme" uid="uid://dhp752uhv76yu" path="res://Themes/menu theme.tres" id="1_5kkhb"]
+[ext_resource type="Script" path="res://Main/Main.gd" id="2_88q34"]
+[ext_resource type="PackedScene" uid="uid://ce8vu5exys6pd" path="res://Settings/Settings.tscn" id="3_nat7n"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,8 +15,8 @@ offset_right = 22.0
 offset_bottom = 26.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_48inm")
-script = ExtResource("2_jtutc")
+theme = ExtResource("1_5kkhb")
+script = ExtResource("2_88q34")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -46,28 +46,28 @@ offset_bottom = 74.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="play" type="Button" parent="Panel/VBoxContainer"]
+[node name="Play" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../quit")
+focus_neighbor_top = NodePath("../Quit")
 focus_neighbor_bottom = NodePath("../Settings")
 text = "Play"
 
 [node name="Settings" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../play")
-focus_neighbor_bottom = NodePath("../quit")
+focus_neighbor_top = NodePath("../Play")
+focus_neighbor_bottom = NodePath("../Quit")
 text = "Settings"
 
-[node name="quit" type="Button" parent="Panel/VBoxContainer"]
+[node name="Quit" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../Settings")
-focus_neighbor_bottom = NodePath("../play")
+focus_neighbor_bottom = NodePath("../Play")
 text = "Quit"
 
-[node name="settings" parent="." instance=ExtResource("3_rgb6d")]
+[node name="Settings" parent="." instance=ExtResource("3_nat7n")]
 visible = false
 layout_mode = 1
 
-[connection signal="pressed" from="Panel/VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

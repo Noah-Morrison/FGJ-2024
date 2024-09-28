@@ -1,8 +1,8 @@
 [gd_resource type="Theme" load_steps=7 format=3 uid="uid://dhp752uhv76yu"]
 
-[ext_resource type="StyleBox" uid="uid://cmsjv5j7k4071" path="res://textures/hover.tres" id="1_moo4e"]
-[ext_resource type="StyleBox" uid="uid://b7boq8tnlkjxa" path="res://textures/cheese.tres" id="2_pwq43"]
-[ext_resource type="StyleBox" uid="uid://tjrxrmbkwa68" path="res://textures/pressed.tres" id="3_v8hrm"]
+[ext_resource type="StyleBox" uid="uid://cmsjv5j7k4071" path="res://Textures/hover.tres" id="1_moo4e"]
+[ext_resource type="StyleBox" uid="uid://b7boq8tnlkjxa" path="res://Textures/cheese.tres" id="2_pwq43"]
+[ext_resource type="StyleBox" uid="uid://tjrxrmbkwa68" path="res://Textures/pressed.tres" id="3_v8hrm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ju1t3"]
 bg_color = Color(0.443137, 0.65098, 0.501961, 1)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ce8vu5exys6pd"]
 
-[ext_resource type="Theme" uid="uid://dhp752uhv76yu" path="res://themes/menu theme.tres" id="1_ju7xv"]
-[ext_resource type="Script" path="res://menu scenes/settings.gd" id="2_d2plt"]
+[ext_resource type="Theme" uid="uid://dhp752uhv76yu" path="res://Themes/menu theme.tres" id="1_ju7xv"]
+[ext_resource type="Script" path="res://Settings/Settings.gd" id="2_d2plt"]
 
 [node name="settings menu" type="Control"]
 layout_mode = 3
@@ -26,9 +26,11 @@ offset_right = 526.0
 offset_bottom = 241.0
 grow_horizontal = 2
 grow_vertical = 2
+current_tab = 0
 
 [node name="sound" type="TabBar" parent="TabContainer"]
 layout_mode = 2
+metadata/_tab_index = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/sound"]
 layout_mode = 1
@@ -51,6 +53,7 @@ text = "Close settings"
 [node name="Graphics" type="TabBar" parent="TabContainer"]
 visible = false
 layout_mode = 2
+metadata/_tab_index = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Graphics"]
 layout_mode = 1
@@ -73,6 +76,7 @@ text = "Close settings"
 [node name="Gameplay" type="TabBar" parent="TabContainer"]
 visible = false
 layout_mode = 2
+metadata/_tab_index = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Gameplay"]
 layout_mode = 1

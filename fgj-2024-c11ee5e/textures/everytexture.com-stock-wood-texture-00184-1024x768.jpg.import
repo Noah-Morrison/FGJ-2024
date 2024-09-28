@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7jqxjr0q1qsb"
-path="res://.godot/imported/everytexture.com-stock-wood-texture-00184-1024x768.jpg-d6b61fe7794e313228e4c2331e7c5a0d.ctex"
+path="res://.godot/imported/everytexture.com-stock-wood-texture-00184-1024x768.jpg-460736c548493a4737ae99b9abe8588a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/everytexture.com-stock-wood-texture-00184-1024x768.jpg"
-dest_files=["res://.godot/imported/everytexture.com-stock-wood-texture-00184-1024x768.jpg-d6b61fe7794e313228e4c2331e7c5a0d.ctex"]
+source_file="res://Textures/everytexture.com-stock-wood-texture-00184-1024x768.jpg"
+dest_files=["res://.godot/imported/everytexture.com-stock-wood-texture-00184-1024x768.jpg-460736c548493a4737ae99b9abe8588a.ctex"]
 
 [params]
 

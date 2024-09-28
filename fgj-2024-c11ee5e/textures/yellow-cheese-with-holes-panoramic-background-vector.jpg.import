@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkck2qhvfl7y0"
-path="res://.godot/imported/yellow-cheese-with-holes-panoramic-background-vector.jpg-6ebbd6466021f74aebdc44fa6dcf12dd.ctex"
+path="res://.godot/imported/yellow-cheese-with-holes-panoramic-background-vector.jpg-aaa564f81646f10f550d9d520eba4ac8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/yellow-cheese-with-holes-panoramic-background-vector.jpg"
-dest_files=["res://.godot/imported/yellow-cheese-with-holes-panoramic-background-vector.jpg-6ebbd6466021f74aebdc44fa6dcf12dd.ctex"]
+source_file="res://Textures/yellow-cheese-with-holes-panoramic-background-vector.jpg"
+dest_files=["res://.godot/imported/yellow-cheese-with-holes-panoramic-background-vector.jpg-aaa564f81646f10f550d9d520eba4ac8.ctex"]
 
 [params]
 

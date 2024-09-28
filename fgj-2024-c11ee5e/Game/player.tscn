@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4lfv8b6bqbuu"]
 
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_l5xm5"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_l5xm5"]
 [ext_resource type="Texture2D" uid="uid://cip0efv1obghb" path="res://Art/Mouse_Sprite.png" id="2_sgut1"]
 
 [node name="Player" type="Node2D"]
