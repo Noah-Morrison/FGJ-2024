@@ -12,3 +12,7 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("escape"):
 		$Control.visible = true
+	
+	if Global.cheese_fallen == true:
+		$"cheese and shadow"/cheese.visible = true
+		$"cheese and shadow/shadow".visible = false
