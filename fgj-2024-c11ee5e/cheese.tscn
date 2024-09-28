@@ -1,29 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cipk1207u5ti7"]
+[gd_scene load_steps=3 format=3 uid="uid://cipk1207u5ti7"]
 
-[ext_resource type="Texture2D" uid="uid://b3xqrtyhjmjum" path="res://Art/filled cheese.png" id="1_pgo3d"]
-[ext_resource type="Texture2D" uid="uid://c7eo853gke3yh" path="res://hole cheese.png" id="2_e3ejr"]
+[ext_resource type="TileSet" uid="uid://fv4e2qegbppu" path="res://cheese tileset.tres" id="1_tq7un"]
 [ext_resource type="Script" path="res://cheese.gd" id="2_g2hfr"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xpa0t"]
-texture = ExtResource("1_pgo3d")
-texture_region_size = Vector2i(112, 112)
-0:0/0 = 0
-1:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0a3v0"]
-texture = ExtResource("2_e3ejr")
-texture_region_size = Vector2i(106, 106)
-0:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_bdelg"]
-tile_size = Vector2i(106, 106)
-sources/1 = SubResource("TileSetAtlasSource_xpa0t")
-sources/2 = SubResource("TileSetAtlasSource_0a3v0")
-
 [node name="TileMap" type="TileMap"]
-tile_set = SubResource("TileSet_bdelg")
+tile_set = ExtResource("1_tq7un")
 format = 2
 layer_0/tile_data = PackedInt32Array(-65536, 65537, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 1, 0, 5, 1, 0, -1, 1, 0, 65535, 1, 0, 131071, 1, 0, 196607, 1, 0, 262143, 1, 0, 327679, 1, 0, 393215, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 65541, 1, 0, 131077, 1, 0, 196613, 1, 0, 262149, 1, 0)
 script = ExtResource("2_g2hfr")

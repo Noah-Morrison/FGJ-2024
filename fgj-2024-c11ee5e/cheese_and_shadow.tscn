@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhrqdvy881gi0"]
+
+[ext_resource type="TileSet" uid="uid://fv4e2qegbppu" path="res://cheese tileset.tres" id="1_bhik8"]
+[ext_resource type="Script" path="res://cheese.gd" id="2_rejsm"]
+
+[node name="cheese and shadow" type="Node2D"]
+
+[node name="cheese" type="TileMap" parent="."]
+tile_set = ExtResource("1_bhik8")
+format = 2
+script = ExtResource("2_rejsm")
