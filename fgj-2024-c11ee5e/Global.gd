@@ -14,7 +14,8 @@ var total_movesP2 = 5
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if move_counter >= total_moves:
+		cheese_fallen = true
 
 
 func _ready():
