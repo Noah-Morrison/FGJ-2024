@@ -14,8 +14,8 @@ var cheese_holes = []
 var hole_amount = 2
 var hole_coords = 2 #(x, y)
 
-var player1_x
-var player1_y
+var player_x
+var player_y
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
