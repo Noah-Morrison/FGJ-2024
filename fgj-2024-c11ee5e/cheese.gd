@@ -3,6 +3,7 @@ extends Node2D
 var holes = 2
 var prevlocx = 100
 var prevlocy =100
+# this reads left to right for each line in the grid
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

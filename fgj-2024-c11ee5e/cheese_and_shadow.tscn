@@ -38,6 +38,7 @@ sources/1 = SubResource("TileSetAtlasSource_t6j2b")
 script = ExtResource("2_rejsm")
 
 [node name="cheese" type="TileMap" parent="."]
+visible = false
 tile_set = ExtResource("1_bhik8")
 format = 2
 layer_0/tile_data = PackedInt32Array(-65535, 1, 0, -65536, 1, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 1, 0, 5, 1, 0, -1, 1, 0, 65535, 1, 0, 131071, 1, 0, 196607, 1, 0, 262143, 1, 0, 327679, 1, 0, 65541, 1, 0, 131077, 1, 0, 196613, 1, 0, 262149, 1, 0, 327685, 1, 0, 327684, 1, 0, 327683, 1, 0, 327682, 1, 0, 327681, 1, 0, 327680, 1, 0, 393215, 1, 0)
