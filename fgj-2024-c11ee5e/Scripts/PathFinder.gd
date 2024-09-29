@@ -1,6 +1,6 @@
 # Finds the path between two points among walkable cells using the AStar pathfinding algorithm.
 class_name PathFinder
-extends Reference
+extends ReferenceRect
 
 # We will use that constant in "for" loops later. It defines the directions in which we allow a unit
 # to move in the game: up, left, right, down.

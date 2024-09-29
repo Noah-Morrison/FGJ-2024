@@ -4,7 +4,7 @@ var aster_grid = AStarGrid2D.new()
 var timer = null
 var movement_delay = 0.35
 var can_move = true
-var move_to_cheese_hole = true
+var rng = randi_range(1, 4)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	timer = Timer.new()
@@ -18,6 +18,7 @@ func on_timeout_complete():
 	can_move = true
 
 func _input(_event):
+	var commit = false
 	if rng == 1 && can_move:
 		if position.y < 100:
 			pass
@@ -26,6 +27,8 @@ func _input(_event):
 			rotation = 0
 			can_move = false
 			timer.start()
+			commit = true
+			rng = randi_range(1, 4)
 	if rng == 2 && can_move:
 		if position.y > 400:
 			pass
@@ -34,6 +37,8 @@ func _input(_event):
 			rotation = 3.2
 			can_move = false
 			timer.start()
+			commit = true
+			rng = randi_range(1, 4)
 	if rng == 3 && can_move:
 		if position.x < 100:
 			pass
@@ -42,6 +47,8 @@ func _input(_event):
 			rotation = 4.7
 			can_move = false
 			timer.start()
+			commit = true
+			rng = randi_range(1, 4)
 	if rng == 4 && can_move:
 		if position.x > 400:
 			pass
@@ -50,4 +57,15 @@ func _input(_event):
 			rotation = 1.5
 			can_move = false
 			timer.start()
+			commit = true
+			rng = randi_range(1, 4)
+	"""if commit:
+		can_move = false
+		timer.start()
+		Global.move_counterAI +=1
+	if total_moves_AI < 8:
+		can_move = true
+		pass
+	else:
+		can_move = false"""
 	

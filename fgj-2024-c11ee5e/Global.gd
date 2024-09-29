@@ -8,7 +8,10 @@ var move_counter = 0
 var total_moves = 8
 
 var move_counterP2 = 0
-var total_movesP2 = 5
+var total_movesP2 = 8
+
+var move_counterAI = 0
+var total_movesAI = 8
 
 var cheese_holes = []
 var hole_amount = 2
