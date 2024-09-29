@@ -7,7 +7,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Panel/VBoxContainer/Label.text = "someone died"
+	$Panel/VBoxContainer/Label.text = "Get Swissed!"
 
 
 func _on_return_pressed():

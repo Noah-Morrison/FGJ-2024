@@ -48,4 +48,5 @@ func on_timeout_complete():
 func reset():
 	get_tree().reload_current_scene()
 	Global.move_counter = 0
+	Global.move_counterP2 = 0
 	Global.cheese_fallen = false

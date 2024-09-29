@@ -50,36 +50,36 @@ offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="resume" type="Button" parent="Panel/VBoxContainer"]
+[node name="Resume" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../quit")
-focus_neighbor_bottom = NodePath("../reset")
+focus_neighbor_top = NodePath("../Return")
+focus_neighbor_bottom = NodePath("../Reset")
 text = "Resume"
 
-[node name="reset" type="Button" parent="Panel/VBoxContainer"]
+[node name="Reset" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../resume")
-focus_neighbor_bottom = NodePath("../settings")
+focus_neighbor_top = NodePath("../Resume")
+focus_neighbor_bottom = NodePath("../Settings")
 text = "Reset"
 
-[node name="settings" type="Button" parent="Panel/VBoxContainer"]
+[node name="Settings" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../resume")
-focus_neighbor_bottom = NodePath("../quit")
+focus_neighbor_top = NodePath("../Resume")
+focus_neighbor_bottom = NodePath("../Return")
 text = "Settings
 "
 
-[node name="quit" type="Button" parent="Panel/VBoxContainer"]
+[node name="Return" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../settings")
-focus_neighbor_bottom = NodePath("../resume")
-text = "Quit"
+focus_neighbor_top = NodePath("../Settings")
+focus_neighbor_bottom = NodePath("../Resume")
+text = "Main Menu"
 
 [node name="settings menu" parent="." instance=ExtResource("3_yy8cd")]
 visible = false
 layout_mode = 1
 
-[connection signal="pressed" from="Panel/VBoxContainer/resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/reset" to="." method="_on_reset_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Return" to="." method="_on_return_pressed"]

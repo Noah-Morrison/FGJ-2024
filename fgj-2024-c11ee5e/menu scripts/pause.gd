@@ -12,10 +12,6 @@ func _process(delta):
 		$"settings menu".visible = false
 
 
-func _on_quit_pressed():
-	get_tree().quit()
-
-
 func _on_resume_pressed():
 	$".".visible = false
 
@@ -25,4 +21,8 @@ func _on_settings_pressed():
 
 
 func _on_reset_pressed():
+	Global.reset()
+	
+func _on_return_pressed():
+	get_tree().change_scene_to_file("res://menu scenes/main menu.tscn")
 	Global.reset()

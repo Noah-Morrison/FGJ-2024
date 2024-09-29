@@ -47,6 +47,7 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
+horizontal_alignment = 1
 
 [node name="reset" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -54,7 +55,7 @@ text = "Reset"
 
 [node name="return" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Return to main menu"
+text = "Main Menu"
 
 [connection signal="pressed" from="Panel/VBoxContainer/reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/return" to="." method="_on_return_pressed"]
