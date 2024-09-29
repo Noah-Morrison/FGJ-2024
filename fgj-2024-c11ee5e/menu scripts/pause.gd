@@ -22,3 +22,7 @@ func _on_resume_pressed():
 
 func _on_settings_pressed():
 	$"settings menu".visible = true
+
+
+func _on_reset_pressed():
+	Global.reset()

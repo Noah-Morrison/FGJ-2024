@@ -44,3 +44,8 @@ func _process(delta):
 	
 func on_timeout_complete():
 	cheese_fallen = true
+
+func reset():
+	get_tree().reload_current_scene()
+	Global.move_counter = 0
+	Global.cheese_fallen = false

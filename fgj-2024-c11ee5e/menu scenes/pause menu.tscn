@@ -80,5 +80,6 @@ visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="Panel/VBoxContainer/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/quit" to="." method="_on_quit_pressed"]
