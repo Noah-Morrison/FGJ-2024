@@ -5,17 +5,20 @@ var timer_delay = 1
 var cheese_fallen = false
 
 var move_counter = 0
-var total_moves = 8
-
 var move_counterP2 = 0
-var total_movesP2 = 5
+var total_moves = 8
 
 var cheese_holes = []
 var hole_amount = 2
 var hole_coords = 2 #(x, y)
 
-var player1_x
-var player1_y
+# 'Getter' variables for player 1's co-ordinates
+var player1_x = -1
+var player1_y = -1
+
+# 'Getter' variables for player 2's co-ordinates
+var player2_x = -1
+var player2_y = -1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,7 +37,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if move_counter >= total_moves:
+	if move_counter >= total_moves or move_counterP2 >= total_moves:
 		cheese_fallen = true
 
 

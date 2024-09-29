@@ -5,8 +5,8 @@ var timer = null
 var movement_delay = 0.35
 var can_move = true
 
-var x_coord = 2
-var y_coord = 2
+var x_coord = 0
+var y_coord = 0
 var actions = ["move_up", "move_down", "move_left", "move_right"]
 var grid_x = [58, 163, 268, 373, 478]
 var grid_y = [62, 167, 272, 377, 482]
@@ -25,6 +25,7 @@ func _ready():
 	timer.set_wait_time(movement_delay)
 	timer.connect("timeout", Callable(self, "on_timeout_complete"))
 	add_child(timer)
+	rotation = direction["right"]
 	
 func on_timeout_complete():
 	can_move = true
@@ -35,8 +36,8 @@ func _process(delta):
 	position.y = grid_y[y_coord]
 	
 	# Temporary variable for debugging
-	Global.player_x = x_coord
-	Global.player_y = y_coord
+	Global.player1_x = x_coord
+	Global.player1_y = y_coord
 	
 	if Global.cheese_fallen:
 		visible = false
