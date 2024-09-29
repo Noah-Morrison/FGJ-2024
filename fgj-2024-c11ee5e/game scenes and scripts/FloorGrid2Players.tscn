@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dwgmbles88qve"]
+[gd_scene load_steps=12 format=3 uid="uid://dwgmbles88qve"]
 
 [ext_resource type="Script" path="res://game scenes and scripts/FloorGrid.gd" id="1_2jsr5"]
 [ext_resource type="Theme" uid="uid://dhp752uhv76yu" path="res://themes/menu theme.tres" id="2_udvju"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b4lfv8b6bqbuu" path="res://game scenes and scripts/player.tscn" id="4_vg5vx"]
 [ext_resource type="PackedScene" uid="uid://kinoikxjb7pa" path="res://game scenes and scripts/player_2.tscn" id="5_ok1qy"]
 [ext_resource type="PackedScene" uid="uid://c02q8khej1us8" path="res://menu scenes/pause menu.tscn" id="6_5emqt"]
+[ext_resource type="PackedScene" uid="uid://cao7inimqjfph" path="res://1_player_death.tscn" id="7_63t2d"]
 [ext_resource type="Script" path="res://game scenes and scripts/MoveCounter.gd" id="7_budbd"]
 [ext_resource type="Script" path="res://game scenes and scripts/MoveCounterP2.gd" id="8_44jbw"]
 
@@ -176,6 +177,12 @@ position = Vector2(163, 272)
 
 [node name="Player2" parent="." instance=ExtResource("5_ok1qy")]
 position = Vector2(374, 267)
+
+[node name="player death" parent="." instance=ExtResource("7_63t2d")]
+offset_left = 272.0
+offset_top = 272.0
+offset_right = 272.0
+offset_bottom = 272.0
 
 [node name="Control" parent="." instance=ExtResource("6_5emqt")]
 visible = false
