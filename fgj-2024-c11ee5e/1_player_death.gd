@@ -7,7 +7,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Panel/VBoxContainer/Label.text = "Get Swissed!"
+	if Global.player_dead[1] == -1:
+		$Panel/VBoxContainer/Label.text = "Get Swissed!"
+	elif Global.player_dead[0] == 0 and Global.player_dead[1] == 0:
+		$Panel/VBoxContainer/Label.text = "Get Swissed!"
+	elif Global.player_dead[0] == 1 and Global.player_dead[1] == 0:
+		$Panel/VBoxContainer/Label.text = "Player 1 Wins!"
+	elif Global.player_dead[0] == 0 and Global.player_dead[1] == 1:
+		$Panel/VBoxContainer/Label.text = "Player 2 Wins!"
 
 
 func _on_return_pressed():

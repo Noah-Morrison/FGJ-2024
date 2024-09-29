@@ -26,6 +26,7 @@ func _ready():
 	timer.connect("timeout", Callable(self, "on_timeout_complete"))
 	add_child(timer)
 	rotation = direction["leftP2"]
+	Global.player_dead[1] = 1
 	
 func on_timeout_complete():
 	can_move = true
@@ -39,11 +40,13 @@ func _process(delta):
 	Global.player2_x = x_coord
 	Global.player2_y = y_coord
 	
-	if Global.cheese_fallen:
+	if Global.cheese_fallen and Global.player_dead[1] == 1:
 		visible = false
+		Global.player_dead[1] = 0
 		for i in Global.hole_amount:
 			if x_coord == Global.cheese_holes[i][0] and y_coord == Global.cheese_holes[i][1]:
 				visible = true
+				Global.player_dead[1] = 1
 	
 func commit_action(action):
 	var commit = false
