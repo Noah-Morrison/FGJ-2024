@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://iaku0euadr8d"]
+
+[ext_resource type="Script" path="res://game scenes and scripts/Credits.gd" id="1_y8uk7"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_y8uk7")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -23.0
+offset_top = -11.0
+offset_right = 2200.0
+offset_bottom = 1355.0
+
+[node name="Title" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 279.0
+offset_right = 980.0
+offset_bottom = 323.0
+text = "Swiss"
+
+[node name="Credits" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 370.0
+offset_right = 1176.0
+offset_bottom = 603.0
+text = "Credits:
+
+Kris Clark
+Fergus Currie
+Ross McCorkindale
+Noah Morisson
+Michael Robb"
+
+[node name="Back" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

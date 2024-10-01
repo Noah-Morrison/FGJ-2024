@@ -62,6 +62,11 @@ focus_neighbor_top = NodePath("../play")
 focus_neighbor_bottom = NodePath("../quit")
 text = "Settings"
 
+[node name="credits" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Credits
+"
+
 [node name="quit" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../Settings")
@@ -75,4 +80,5 @@ layout_mode = 1
 [connection signal="pressed" from="Panel/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/play2" to="." method="_on_play_2_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/quit" to="." method="_on_quit_pressed"]
