@@ -25,3 +25,8 @@ func _on_play_pressed():
 
 func _on_play_2_pressed():
 	get_tree().change_scene_to_file("res://game scenes and scripts/FloorGrid2Players.tscn")
+
+
+
+func _on_credits_pressed():
+	get_tree().change_scene_to_file("res://game scenes and scripts/Credits.tscn")
