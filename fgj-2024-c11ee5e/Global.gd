@@ -24,7 +24,7 @@ var player2_x = -1
 var player2_y = -1
 
 # Add trigger reset
-var trigger_reset = false
+var trigger_reset = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -46,8 +46,8 @@ func _process(delta):
 	if move_counter >= total_moves or move_counterP2 >= total_moves:
 		cheese_fallen = true
 	
-	if cheese_fallen == true and trigger_reset == true and player_dead[1] == -1:
-		await get_tree().create_timer(1.0).timeout
+	if cheese_fallen == true and trigger_reset == 2 or (player_dead[1] == -1 and trigger_reset == 1):
+		await get_tree().create_timer(2.0).timeout
 		reset()
 
 
@@ -60,5 +60,5 @@ func reset():
 	move_counter = 0
 	move_counterP2 = 0
 	cheese_fallen = false
-	trigger_reset = false
+	trigger_reset = 0
 	player_dead = [-1, -1]

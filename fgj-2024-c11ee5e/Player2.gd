@@ -47,6 +47,7 @@ func _process(delta):
 			if x_coord == Global.cheese_holes[i][0] and y_coord == Global.cheese_holes[i][1]:
 				visible = true
 				Global.player_dead[1] = 1
+				Global.trigger_reset += 1
 	
 func commit_action(action):
 	var commit = false
