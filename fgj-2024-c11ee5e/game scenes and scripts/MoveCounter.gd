@@ -8,7 +8,7 @@ func _ready():
 func _process(delta):
 	self.text = str("Moves (P1): " , Global.move_counter , "/" , Global.total_moves, "\n",
 					##"\n",
-					"Moves (P2): " , Global.move_counterP2 , "/" , Global.total_moves, "\n",
+					##"Moves (P2): " , Global.move_counterP2 , "/" , Global.total_moves, "\n",
 					##"\n",
 					##"Position (P1): " , Global.player1_x + 1, "-", Global.player1_y, "\n",
 					##"\n",
