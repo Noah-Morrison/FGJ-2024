@@ -11,7 +11,7 @@ var move_counterP2 = 0
 var total_moves = 8
 
 var cheese_holes = []
-var player_dead = [-1, -1]
+var player_alive = [-1, -1]
 var hole_amount = 2
 var hole_coords = 2 #(x, y)
 
@@ -23,8 +23,7 @@ var player1_y = -1
 var player2_x = -1
 var player2_y = -1
 
-# Add trigger reset
-var trigger_reset = 0
+var state_checks = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -46,9 +45,10 @@ func _process(delta):
 	if move_counter >= total_moves or move_counterP2 >= total_moves:
 		cheese_fallen = true
 	
-	if cheese_fallen == true and trigger_reset == 2 or (player_dead[1] == -1 and trigger_reset == 1):
-		await get_tree().create_timer(2.0).timeout
-		reset()
+	if cheese_fallen:
+		if player_alive[0] == 2 and (player_alive[1] == -1 or player_alive[1] == 2):
+			await get_tree().create_timer(2.0).timeout
+			reset()
 
 
 	
@@ -60,5 +60,4 @@ func reset():
 	move_counter = 0
 	move_counterP2 = 0
 	cheese_fallen = false
-	trigger_reset = 0
-	player_dead = [-1, -1]
+	player_alive = [-1, -1]

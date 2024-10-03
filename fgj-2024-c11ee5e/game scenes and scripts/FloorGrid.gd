@@ -18,5 +18,5 @@ func _process(delta):
 		$"cheese and shadow"/cheese.visible = true
 		$"cheese and shadow/shadow".visible = false
 		
-	if Global.player_dead[0] == 0 or Global.player_dead[1] == 0:
+	if Global.player_alive[0] == 0 or Global.player_alive[1] == 0:
 		$"player death".visible = true

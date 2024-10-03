@@ -18,6 +18,9 @@ var direction = {
 	"rightP2" : 1.5,
 }
 
+var state_check = false
+var survive_state = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	timer = Timer.new()
@@ -26,7 +29,7 @@ func _ready():
 	timer.connect("timeout", Callable(self, "on_timeout_complete"))
 	add_child(timer)
 	rotation = direction["leftP2"]
-	Global.player_dead[1] = 1
+	Global.player_alive[1] = 1
 	
 func on_timeout_complete():
 	can_move = true
@@ -40,14 +43,9 @@ func _process(delta):
 	Global.player2_x = x_coord
 	Global.player2_y = y_coord
 	
-	if Global.cheese_fallen and Global.player_dead[1] == 1:
-		visible = false
-		Global.player_dead[1] = 0
-		for i in Global.hole_amount:
-			if x_coord == Global.cheese_holes[i][0] and y_coord == Global.cheese_holes[i][1]:
-				visible = true
-				Global.player_dead[1] = 1
-				Global.trigger_reset += 1
+	if Global.cheese_fallen == true and state_check == false:
+		state_check = check_state()
+	
 	
 func commit_action(action):
 	var commit = false
@@ -82,6 +80,18 @@ func commit_action(action):
 		Global.move_counterP2 += 1
 		rotation = direction[action.split("_")[1]]
 
+func check_state():
+	for i in Global.hole_amount:
+		if x_coord == Global.cheese_holes[i][0] and y_coord == Global.cheese_holes[i][1]:
+			survive_state = true
+			Global.player_alive[1] = 2
+			
+	if !survive_state:
+		visible = false
+		Global.player_alive[1] = 0
+				
+	return true
+	
 # Function to handle player inputs
 func _input(event):
 	# Check to see if player has any moves left	

@@ -6,14 +6,18 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if (Global.player_dead[1] == -1):
+	if (Global.player_alive[1] == -1):
 		self.text = str("Moves (P1): " , Global.move_counter , "/" , Global.total_moves, "\n",
+		##"\n",
+		##"Tigger Reset Counter: ", Global.trigger_reset,
 		)
 		
 	else:
 		self.text = str("Moves (P1): " , Global.move_counter , "/" , Global.total_moves, "\n",
 		"\n",
 		"Moves (P2): " , Global.move_counterP2 , "/" , Global.total_moves, "\n",
+		##"\n",
+		##"Tigger Reset Counter: ", Global.trigger_reset,
 		)
 		
 					##"\n",
