@@ -47,6 +47,9 @@ func _process(delta):
 			if x_coord == Global.cheese_holes[i][0] and y_coord == Global.cheese_holes[i][1]:
 				Global.player_dead[0] = 1
 				visible = true
+				
+		if Global.player_dead[0] == 1:
+			Global.trigger_reset = true
 
 
 	

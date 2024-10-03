@@ -23,6 +23,9 @@ var player1_y = -1
 var player2_x = -1
 var player2_y = -1
 
+# Add trigger reset
+var trigger_reset = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 # Initialise a global 2D array for the cheese holes co-ordinates
@@ -42,9 +45,10 @@ func _ready():
 func _process(delta):
 	if move_counter >= total_moves or move_counterP2 >= total_moves:
 		cheese_fallen = true
-		if auto_reset == true and (move_counter == total_moves or move_counterP2 == total_moves):
-			await get_tree().create_timer(1.0).timeout
-			reset()
+	
+	if cheese_fallen == true and trigger_reset == true and player_dead[1] == -1:
+		await get_tree().create_timer(1.0).timeout
+		reset()
 
 
 	
@@ -56,4 +60,5 @@ func reset():
 	move_counter = 0
 	move_counterP2 = 0
 	cheese_fallen = false
+	trigger_reset = false
 	player_dead = [-1, -1]
