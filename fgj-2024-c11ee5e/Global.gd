@@ -4,6 +4,8 @@ var timer = null
 var timer_delay = 1
 var cheese_fallen = false
 
+var auto_reset = true
+
 var move_counter = 0
 var move_counterP2 = 0
 var total_moves = 8
@@ -40,6 +42,9 @@ func _ready():
 func _process(delta):
 	if move_counter >= total_moves or move_counterP2 >= total_moves:
 		cheese_fallen = true
+		if auto_reset == true and (move_counter == total_moves or move_counterP2 == total_moves):
+			await get_tree().create_timer(1.0).timeout
+			reset()
 
 
 	
