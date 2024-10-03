@@ -1,15 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwgmbles88qve"]
+[gd_scene load_steps=14 format=3 uid="uid://dwgmbles88qve"]
 
 [ext_resource type="Script" path="res://game scenes and scripts/FloorGrid.gd" id="1_2jsr5"]
 [ext_resource type="Theme" uid="uid://dhp752uhv76yu" path="res://themes/menu theme.tres" id="2_udvju"]
 [ext_resource type="Texture2D" uid="uid://bthwwbjg5ekq1" path="res://textures/brown-wooden-table-texture-for-background-or-wallpaper-use-free-photo.jpg" id="3_xa4xd"]
 [ext_resource type="PackedScene" uid="uid://bhrqdvy881gi0" path="res://cheese_and_shadow.tscn" id="4_jjlu7"]
+[ext_resource type="Texture2D" uid="uid://doqi5e7ej0gy7" path="res://Art/GameJamGrid.png" id="4_r5als"]
 [ext_resource type="PackedScene" uid="uid://b4lfv8b6bqbuu" path="res://game scenes and scripts/player.tscn" id="4_vg5vx"]
 [ext_resource type="PackedScene" uid="uid://kinoikxjb7pa" path="res://game scenes and scripts/player_2.tscn" id="5_ok1qy"]
 [ext_resource type="PackedScene" uid="uid://c02q8khej1us8" path="res://menu scenes/pause menu.tscn" id="6_5emqt"]
 [ext_resource type="PackedScene" uid="uid://cao7inimqjfph" path="res://1_player_death.tscn" id="7_63t2d"]
 [ext_resource type="Script" path="res://game scenes and scripts/MoveCounter.gd" id="7_budbd"]
 [ext_resource type="Script" path="res://game scenes and scripts/MoveCounterP2.gd" id="8_44jbw"]
+[ext_resource type="Texture2D" uid="uid://bodtn0rf8f36g" path="res://Art/GameJamBackground.png" id="12_fmf57"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lrp7g"]
 texture = ExtResource("3_xa4xd")
@@ -169,6 +171,16 @@ polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
 position = Vector2(425, 5)
 color = Color(0.956863, 0.52549, 0.407843, 1)
 polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="GameJamBackground" type="Sprite2D" parent="."]
+position = Vector2(519, 491)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("12_fmf57")
+
+[node name="GameJamGrid" type="Sprite2D" parent="."]
+position = Vector2(266, 264)
+scale = Vector2(0.266, 0.267)
+texture = ExtResource("4_r5als")
 
 [node name="cheese and shadow" parent="." instance=ExtResource("4_jjlu7")]
 

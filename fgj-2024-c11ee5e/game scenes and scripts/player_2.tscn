@@ -1,11 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://kinoikxjb7pa"]
 
 [ext_resource type="Script" path="res://Player2.gd" id="1_3qpb6"]
-[ext_resource type="Texture2D" uid="uid://b4ivbng17kclu" path="res://Art/Mouse.png" id="2_ve1md"]
+[ext_resource type="Texture2D" uid="uid://dp4ocomvpjftl" path="res://Art/GameJamMouse2.png" id="2_xuf6d"]
 
 [node name="Player2" type="Node2D"]
 script = ExtResource("1_3qpb6")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_ve1md")
+[node name="GameJamMouse2" type="Sprite2D" parent="."]
+position = Vector2(-1.99998, 6.00003)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("2_xuf6d")
