@@ -6,7 +6,16 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	self.text = str("Moves (P1): " , Global.move_counter , "/" , Global.total_moves, "\n",
+	if (Global.player_dead[1] == -1):
+		self.text = str("Moves (P1): " , Global.move_counter , "/" , Global.total_moves, "\n",
+		)
+		
+	else:
+		self.text = str("Moves (P1): " , Global.move_counter , "/" , Global.total_moves, "\n",
+		"\n",
+		"Moves (P2): " , Global.move_counterP2 , "/" , Global.total_moves, "\n",
+		)
+		
 					##"\n",
 					##"Moves (P2): " , Global.move_counterP2 , "/" , Global.total_moves, "\n",
 					##"\n",
@@ -17,4 +26,4 @@ func _process(delta):
 					##"Cheese Hole 1: ", Global.cheese_holes[0][0] + 1, "-", Global.cheese_holes[0][1] + 1, "\n",
 					##"Cheese Hole 2: ", Global.cheese_holes[1][0] + 1, "-", Global.cheese_holes[1][1] + 1, "\n",
 					##"\n",
-					)
+					##)
