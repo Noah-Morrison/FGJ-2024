@@ -12,9 +12,9 @@ func _process(delta):
 	elif Global.player_dead[0] == 0 and Global.player_dead[1] == 0:
 		$Panel/VBoxContainer/Label.text = "Get Swissed!"
 	elif Global.player_dead[0] == 1 and Global.player_dead[1] == 0:
-		$Panel/VBoxContainer/Label.text = "Player 1 Wins!"
+		$Panel/VBoxContainer/Label.text = "Larry Wins!"
 	elif Global.player_dead[0] == 0 and Global.player_dead[1] == 1:
-		$Panel/VBoxContainer/Label.text = "Player 2 Wins!"
+		$Panel/VBoxContainer/Label.text = "Terry Wins!"
 
 
 func _on_return_pressed():
